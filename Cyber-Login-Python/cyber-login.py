@@ -1,9 +1,7 @@
 import json
 
+FILE_NAME = 'cyberlogin.json'
 cyberlogin = []
-
-with open('cyberlogin.json', 'r', encoding='utf-8') as f:
-    cyberlogin = json.load(f)
 
 def create_account():
     username = input("Nome de usuário: ")
@@ -56,8 +54,6 @@ def load_data():
             cyberlogin = json.load(f)
     except Exception:
         cyberlogin = []
-
-#################
 
 if __name__ == '__main__':
     load_data()
